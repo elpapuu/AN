@@ -1,4 +1,4 @@
-package net.rawr.ANTeam.ancientnature.core;
+package net.rawr.ANTeam.ancientnature;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -10,6 +10,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.rawr.ANTeam.ancientnature.registries.*;
 
 @Mod(AncientNature.MODID)
 public class AncientNature {
@@ -18,6 +19,12 @@ public class AncientNature {
     public AncientNature(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
+
+        ANItems.register(modEventBus);
+        ANBlocks.register(modEventBus);
+        ANEntities.register(modEventBus);
+        ANCreativeTabs.register(modEventBus);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
