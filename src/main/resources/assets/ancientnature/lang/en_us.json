@@ -1,3 +1,16 @@
 {
-  "item.ancientnature.raw_dodo": "Raw Dodo"
+  "creativetab.ancientnature_item_tab": "Ancient Nature Items",
+
+  "item.ancientnature.anomalocaris": "Raw Anomalocaris",
+  "item.ancientnature.cooked_anomalocaris": "Cooked Anomalocaris",
+  "item.ancientnature.dodo": "Raw Dodo",
+  "item.ancientnature.cooked_dodo": "Cooked Dodo",
+  "item.ancientnature.paranogmius": "Raw Paranogmius",
+  "item.ancientnature.cooked_paranogmius": "Raw Paranogmius",
+  "item.ancientnature.trilobite": "Raw Trilobite",
+  "item.ancientnature.cooked_trilobite": "Cooked Trilobite",
+  "item.ancientnature.tuzoia": "Raw Tuzoia",
+  "item.ancientnature.cooked_tuzoia": "Cooked Tuzoia",
+  "item.ancientnature.tuzoia_eggs": "Tuzoia Eggs",
+  "item.ancientnature.worm": "Worm"
 }
