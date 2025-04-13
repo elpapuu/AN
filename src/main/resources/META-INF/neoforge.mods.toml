@@ -1,0 +1,28 @@
+modLoader = "javafml"
+loaderVersion = "[4,)" # Adjust to actual loader version range
+license = "MIT"
+
+[[mods]]
+modId = "ancientnature"
+version = "0.1.0"
+displayName = "§l§6Ancient §2Nature"
+logoFile = "AN_logo.png"
+authors = "fuck you"
+description = "penis"
+
+[[mixins]]
+config = "ancientnature.mixins.json"
+
+[[dependencies."ancientnature"]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.146,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."ancientnature"]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"

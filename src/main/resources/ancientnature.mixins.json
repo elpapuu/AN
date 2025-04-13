@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.rawr.ANTeam.mixin",
+  "package": "net.rawr.ANTeam.ancientnature.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "ancientnature.refmap.json",
   "mixins": [
