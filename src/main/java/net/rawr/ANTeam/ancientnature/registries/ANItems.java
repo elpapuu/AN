@@ -25,6 +25,18 @@ public class ANItems {
     public static final DeferredItem<Item> DEEPSLATE_PERMIAN_FOSSIL = ITEMS.register("deepslate_permian_fossil", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PLEISTOCENE_FOSSIL = ITEMS.register("pleistocene_fossil", () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> ANOMALOCARIS_FOSSIL = ITEMS.register("anomalocaris_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ARANDASPIS_FOSSIL = ITEMS.register("arandaspis_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DODO_FOSSIL = ITEMS.register("dodo_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PARANOGMIUS_FOSSIL = ITEMS.register("paranogmius_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> THYLACINE_FOSSIL = ITEMS.register("thylacine_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TRILOBITE_FOSSIL = ITEMS.register("trilobite_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TUZOIA_FOSSIL = ITEMS.register("tuzoia_fossil", () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> GINKGO_FOSSIL = ITEMS.register("ginkgo_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DEEPSLATE_GINKGO_FOSSIL = ITEMS.register("deepslate_ginkgo_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LEPIDODENDRON_FOSSIL = ITEMS.register("lepidodendron_fossil", () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> ANOMALOCARIS = ITEMS.register("anomalocaris", () -> new Item(new Item.Properties().food(ANFoods.ANOMALOCARIS)));
     public static final DeferredItem<Item> COOKED_ANOMALOCARIS = ITEMS.register("cooked_anomalocaris", () -> new Item(new Item.Properties().food(ANFoods.COOKED_ANOMALOCARIS)));
     public static final DeferredItem<Item> DODO = ITEMS.register("dodo", () -> new Item(new Item.Properties().food(ANFoods.DODO)));

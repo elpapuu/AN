@@ -34,6 +34,18 @@ public class ANItemModel extends ItemModelProvider {
         basicItem(ANItems.DEEPSLATE_PERMIAN_FOSSIL.get());
         basicItem(ANItems.PLEISTOCENE_FOSSIL.get());
 
+        basicItem(ANItems.ANOMALOCARIS_FOSSIL.get());
+        basicItem(ANItems.ARANDASPIS_FOSSIL.get());
+        basicItem(ANItems.DODO_FOSSIL.get());
+        basicItem(ANItems.PARANOGMIUS_FOSSIL.get());;
+        basicItem(ANItems.THYLACINE_FOSSIL.get());
+        basicItem(ANItems.TRILOBITE_FOSSIL.get());
+        basicItem(ANItems.TUZOIA_FOSSIL.get());
+
+        basicItem(ANItems.GINKGO_FOSSIL.get());
+        basicItem(ANItems.DEEPSLATE_GINKGO_FOSSIL.get());
+        basicItem(ANItems.LEPIDODENDRON_FOSSIL.get());
+
         basicItem(ANItems.ANOMALOCARIS.get());
         basicItem(ANItems.COOKED_ANOMALOCARIS.get());
         basicItem(ANItems.DODO.get());

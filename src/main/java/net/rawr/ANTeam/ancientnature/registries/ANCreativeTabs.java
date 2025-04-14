@@ -31,6 +31,16 @@ public class ANCreativeTabs {
                         output.accept(ANItems.PERMIAN_FOSSIL);
                         output.accept(ANItems.DEEPSLATE_PERMIAN_FOSSIL);
                         output.accept(ANItems.PLEISTOCENE_FOSSIL);
+                        output.accept(ANItems.ANOMALOCARIS_FOSSIL);
+                        output.accept(ANItems.ARANDASPIS_FOSSIL);
+                        output.accept(ANItems.DODO_FOSSIL);
+                        output.accept(ANItems.PARANOGMIUS_FOSSIL);
+                        output.accept(ANItems.THYLACINE_FOSSIL);
+                        output.accept(ANItems.TRILOBITE_FOSSIL);
+                        output.accept(ANItems.TUZOIA_FOSSIL);
+                        output.accept(ANItems.GINKGO_FOSSIL);
+                        output.accept(ANItems.DEEPSLATE_GINKGO_FOSSIL);
+                        output.accept(ANItems.LEPIDODENDRON_FOSSIL);
                         output.accept(ANItems.ANOMALOCARIS);
                         output.accept(ANItems.COOKED_ANOMALOCARIS);
                         output.accept(ANItems.DODO);
