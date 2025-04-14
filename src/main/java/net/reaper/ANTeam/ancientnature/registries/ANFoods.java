@@ -1,4 +1,4 @@
-package net.rawr.ANTeam.ancientnature.registries;
+package net.reaper.ANTeam.ancientnature.registries;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

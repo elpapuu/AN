@@ -10,8 +10,9 @@ config = "ancientnature.mixins.json"
 modId = "ancientnature"
 version = "0.1.0"
 displayName = "§l§6Ancient §2Nature"
-authors = "ANTeam"
-description = "rawr mod horay"
+authors = "Reaper"
+credits="Special thanks to Monkey_Biznec, small_chubby, Will, DinoFazbearYT, HappyG, Bretzelfresser, TheDarkPeasant, qBaumi, VoidArkana, ReinierTheGhost, Doot and Capt1444 for coding this. Thanks to the artists of ChipstheCat, Dororuw, AmyEpic, Raxiore, NM2, Koza, Aniriteron, GreenVaranus, Jurnaro, Gabe-esque, Tamalo20, GC, Evirapo, Grimzz and -Ghoul- for their help. Also special thx to the donors, specially my friends RomanSans and Yahrim for being at the beggining!"  #optional
+description = "A nature from ancient times..."
 
 [[dependencies."ancientnature"]]
 modId = "neoforge"

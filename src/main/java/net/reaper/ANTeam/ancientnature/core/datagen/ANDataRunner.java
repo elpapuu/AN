@@ -1,4 +1,4 @@
-package net.rawr.ANTeam.ancientnature.core.datagen;
+package net.reaper.ANTeam.ancientnature.core.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -6,8 +6,10 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import net.rawr.ANTeam.ancientnature.AncientNature;
-import net.rawr.ANTeam.ancientnature.core.datagen.client.ANItemModel;
+import net.reaper.ANTeam.ancientnature.AncientNature;
+import net.reaper.ANTeam.ancientnature.core.datagen.client.ANBlockStateProvider;
+import net.reaper.ANTeam.ancientnature.core.datagen.client.ANItemModel;
+import net.reaper.ANTeam.ancientnature.core.datagen.server.ANBlockTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,6 +26,8 @@ public class ANDataRunner {
 
         if (event.includeClient()) {
             generator.addProvider(true, new ANItemModel(output, helper));
+            generator.addProvider(true, new ANBlockStateProvider(output, helper));
+            generator.addProvider(true, new ANBlockTagsProvider(output, lookupProvider, helper));
         }
     }
 }
