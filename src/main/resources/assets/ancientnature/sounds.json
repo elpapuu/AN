@@ -1,0 +1,18 @@
+{
+  "ancient_melody": {
+    "sounds": [
+      {
+        "name": "ancientnature:records/ancient_melody",
+        "stream": true
+      }
+    ]
+  },
+  "where_your_journey_begins": {
+    "sounds": [
+      {
+        "name": "ancientnature:records/where_your_journey_begins",
+        "stream": true
+      }
+    ]
+  }
+}

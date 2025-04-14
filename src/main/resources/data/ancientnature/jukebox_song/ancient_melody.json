@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.ancientnature.music_disc_ancient_melody.desc"
+  },
+  "length_in_seconds": 157.0,
+  "sound_event": "ancientnature:ancient_melody"
+}

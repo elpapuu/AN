@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.ancientnature.music_disc_where_your_journey_begins.desc"
+  },
+  "length_in_seconds": 111.0,
+  "sound_event": "ancientnature:where_your_journey_begins"
+}

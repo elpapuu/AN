@@ -1,5 +1,5 @@
 {
-  "creativetab.ancientnature_item_tab": "Ancient Nature Items",
+  "creativetab.ancientnature_items_tab": "Ancient Nature Items",
 
   "item.ancientnature.anomalocaris": "Raw Anomalocaris",
   "item.ancientnature.cooked_anomalocaris": "Cooked Anomalocaris",
@@ -12,5 +12,10 @@
   "item.ancientnature.tuzoia": "Raw Tuzoia",
   "item.ancientnature.cooked_tuzoia": "Cooked Tuzoia",
   "item.ancientnature.tuzoia_eggs": "Tuzoia Eggs",
-  "item.ancientnature.worm": "Worm"
+  "item.ancientnature.worm": "Worm",
+
+  "item.ancientnature.music_disc_ancient_melody": "Music Disc",
+  "item.ancientnature.music_disc_ancient_melody.desc": "ChipsTheCat - Ancient Melody",
+  "item.ancientnature.music_disc_where_your_journey_begins": "Music Disc",
+  "item.ancientnature.music_disc_where_your_journey_begins.desc": "ChipsTheCat - Where Your Journey Begins"
 }
