@@ -18,6 +18,22 @@ public class ANItemModel extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        basicItem(ANItems.AMBER.get());
+        basicItem(ANItems.FERN_AMBER.get());
+        basicItem(ANItems.LIZARD_AMEBR.get());
+        basicItem(ANItems.MOSQUITO_AMBER.get());
+
+        basicItem(ANItems.DEEPSLATE_CAMBRIAN_FOSSIL.get());
+        basicItem(ANItems.CARBONIFEROUS_FOSSIL.get());
+        basicItem(ANItems.CRETACEOUS_FOSSIL.get());
+        basicItem(ANItems.DEVONIAN_FOSSIL.get());
+        basicItem(ANItems.HOLOCENE_FOSSIL.get());
+        basicItem(ANItems.MUDDY_FOSSIL.get());
+        basicItem(ANItems.ORDOVICIAN_FOSSIL.get());
+        basicItem(ANItems.PERMIAN_FOSSIL.get());
+        basicItem(ANItems.DEEPSLATE_PERMIAN_FOSSIL.get());
+        basicItem(ANItems.PLEISTOCENE_FOSSIL.get());
+
         basicItem(ANItems.ANOMALOCARIS.get());
         basicItem(ANItems.COOKED_ANOMALOCARIS.get());
         basicItem(ANItems.DODO.get());

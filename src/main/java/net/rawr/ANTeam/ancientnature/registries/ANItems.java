@@ -1,8 +1,6 @@
 package net.rawr.ANTeam.ancientnature.registries;
 
-import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SignItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -10,6 +8,22 @@ import net.rawr.ANTeam.ancientnature.AncientNature;
 
 public class ANItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AncientNature.MODID);
+
+    public static final DeferredItem<Item> AMBER = ITEMS.register("amber", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FERN_AMBER = ITEMS.register("fern_amber", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LIZARD_AMEBR = ITEMS.register("lizard_amber", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MOSQUITO_AMBER = ITEMS.register("mosquito_amber", () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> DEEPSLATE_CAMBRIAN_FOSSIL = ITEMS.register("deepslate_cambrian_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> CARBONIFEROUS_FOSSIL = ITEMS.register("carboniferous_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> CRETACEOUS_FOSSIL = ITEMS.register("cretaceous_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DEVONIAN_FOSSIL = ITEMS.register("devonian_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> HOLOCENE_FOSSIL = ITEMS.register("holocene_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MUDDY_FOSSIL = ITEMS.register("muddy_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ORDOVICIAN_FOSSIL = ITEMS.register("ordovician_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PERMIAN_FOSSIL = ITEMS.register("permian_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DEEPSLATE_PERMIAN_FOSSIL = ITEMS.register("deepslate_permian_fossil", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PLEISTOCENE_FOSSIL = ITEMS.register("pleistocene_fossil", () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> ANOMALOCARIS = ITEMS.register("anomalocaris", () -> new Item(new Item.Properties().food(ANFoods.ANOMALOCARIS)));
     public static final DeferredItem<Item> COOKED_ANOMALOCARIS = ITEMS.register("cooked_anomalocaris", () -> new Item(new Item.Properties().food(ANFoods.COOKED_ANOMALOCARIS)));

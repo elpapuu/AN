@@ -1,6 +1,22 @@
 {
   "creativetab.ancientnature_items_tab": "Ancient Nature Items",
 
+  "item.ancientnature.amber": "Amber",
+  "item.ancientnature.fern_amber": "Amber with Fern",
+  "item.ancientnature.lizard_amber": "Amber with Lizard",
+  "item.ancientnature.mosquito_amber": "Amber with Mosquito",
+
+  "item.ancientnature.deepslate_cambrian_fossil": "Deepslate Cambrain Fossil",
+  "item.ancientnature.carboniferous_fossil": "Carboniferous Fossil",
+  "item.ancientnature.cretaceous_fossil": "Cretaceous Fossil",
+  "item.ancientnature.devonian_fossil": "Devonian Fossil",
+  "item.ancientnature.holocene_fossil": "Holocene Fossil",
+  "item.ancientnature.muddy_fossil": "Muddy Fossil",
+  "item.ancientnature.ordovician_fossil": "Ordovician Fossil",
+  "item.ancientnature.permian_fossil": "Permian Fossil",
+  "item.ancientnature.deepslate_permian_fossil": "Deepslate Permian Fossil",
+  "item.ancientnature.pleistocene_fossil": "Pleistocene Fossil",
+
   "item.ancientnature.anomalocaris": "Raw Anomalocaris",
   "item.ancientnature.cooked_anomalocaris": "Cooked Anomalocaris",
   "item.ancientnature.dodo": "Raw Dodo",

@@ -14,9 +14,23 @@ public class ANCreativeTabs {
     public static DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AncientNature.MODID);
 
     public static final Supplier<CreativeModeTab> ANCIENTNATURE_ITEMS_TAB = CREATIVE_MODE_TAB.register("ancientnature_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ANItems.DODO.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ANItems.MOSQUITO_AMBER.get()))
                     .title(Component.translatable("creativetab.ancientnature_items_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ANItems.AMBER);
+                        output.accept(ANItems.FERN_AMBER);
+                        output.accept(ANItems.LIZARD_AMEBR);
+                        output.accept(ANItems.MOSQUITO_AMBER);
+                        output.accept(ANItems.DEEPSLATE_CAMBRIAN_FOSSIL);
+                        output.accept(ANItems.CARBONIFEROUS_FOSSIL);
+                        output.accept(ANItems.CRETACEOUS_FOSSIL);
+                        output.accept(ANItems.DEVONIAN_FOSSIL);
+                        output.accept(ANItems.HOLOCENE_FOSSIL);
+                        output.accept(ANItems.MUDDY_FOSSIL);
+                        output.accept(ANItems.ORDOVICIAN_FOSSIL);
+                        output.accept(ANItems.PERMIAN_FOSSIL);
+                        output.accept(ANItems.DEEPSLATE_PERMIAN_FOSSIL);
+                        output.accept(ANItems.PLEISTOCENE_FOSSIL);
                         output.accept(ANItems.ANOMALOCARIS);
                         output.accept(ANItems.COOKED_ANOMALOCARIS);
                         output.accept(ANItems.DODO);

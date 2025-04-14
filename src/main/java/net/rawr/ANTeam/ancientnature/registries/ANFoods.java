@@ -64,7 +64,7 @@ public class ANFoods {
             .Builder()
             .nutrition(6)
             .saturationModifier(0.6f)
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 0), 0.3f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 0), 1.0f)
             .build();
 
     public static final FoodProperties TUZOIA
