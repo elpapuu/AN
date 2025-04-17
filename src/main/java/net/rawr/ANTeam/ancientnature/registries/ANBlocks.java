@@ -49,6 +49,7 @@ public class ANBlocks {
 
     public static final DeferredBlock<Block> LEPIDODENDRON_CONES = registerBlock("lepidodendron_cones", () -> new ANUndersidePlantBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(CAVE_VINES)));
 
+    public static final DeferredBlock<RotatedPillarBlock> LEPIDODENDRON_LOG = makeStrippableLogBlock("lepidodendron_log");
     public static final DeferredBlock<RotatedPillarBlock> UNSCALED_LEPIDODENDRON_LOG = makeStrippableLogBlock("unscaled_lepidodendron_log");
     public static final DeferredBlock<RotatedPillarBlock> STRIPPED_LEPIDODENDRON_LOG = makeStrippedLogBlock("stripped_lepidodendron_log");
 

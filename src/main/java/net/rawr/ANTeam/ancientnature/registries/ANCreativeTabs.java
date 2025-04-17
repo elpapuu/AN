@@ -98,6 +98,7 @@ public class ANCreativeTabs {
                         output.accept(ANBlocks.GINKGO_FENCE);
                         output.accept(ANBlocks.LEPIDODENDRON_LEAVES);
                         output.accept(ANBlocks.LEPIDODENDRON_CONES);
+                        output.accept(ANBlocks.LEPIDODENDRON_LOG);
                         output.accept(ANBlocks.UNSCALED_LEPIDODENDRON_LOG);
                         output.accept(ANBlocks.STRIPPED_LEPIDODENDRON_LOG);
                         output.accept(ANBlocks.LEPIDODENDRON_PLANKS);

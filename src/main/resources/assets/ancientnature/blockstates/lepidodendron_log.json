@@ -1,0 +1,17 @@
+{
+  "render_type": "cutout",
+  "variants": {
+    "axis=x": {
+      "model": "ancientnature:block/lepidodendron_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ancientnature:block/lepidodendron_log"
+    },
+    "axis=z": {
+      "model": "ancientnature:block/lepidodendron_log",
+      "x": 90
+    }
+  }
+}

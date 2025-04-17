@@ -21,6 +21,7 @@ import net.minecraft.core.HolderLookup;
  
          this.tag(BlockTags.MINEABLE_WITH_AXE)
                  .add(ANBlocks.GINKGO_LOG.get())
+                 .add(ANBlocks.LEPIDODENDRON_LOG.get())
                  .add(ANBlocks.STRIPPED_GINKGO_LOG.get())
                  .add(ANBlocks.STRIPPED_LEPIDODENDRON_LOG.get())
                  .add(ANBlocks.UNSCALED_LEPIDODENDRON_LOG.get())
