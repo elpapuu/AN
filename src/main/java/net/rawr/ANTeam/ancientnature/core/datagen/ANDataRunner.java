@@ -7,7 +7,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.rawr.ANTeam.ancientnature.AncientNature;
+import net.rawr.ANTeam.ancientnature.core.datagen.client.ANBlockStateProvider;
 import net.rawr.ANTeam.ancientnature.core.datagen.client.ANItemModel;
+import net.rawr.ANTeam.ancientnature.core.datagen.server.ANBlockTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,6 +26,8 @@ public class ANDataRunner {
 
         if (event.includeClient()) {
             generator.addProvider(true, new ANItemModel(output, helper));
+            generator.addProvider(true, new ANBlockStateProvider(output, helper));
+            generator.addProvider(true, new ANBlockTagsProvider(output, lookupProvider, helper));
         }
     }
 }

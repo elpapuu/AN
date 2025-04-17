@@ -9,6 +9,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.rawr.ANTeam.ancientnature.AncientNature;
+import net.rawr.ANTeam.ancientnature.registries.ANBlocks;
 import net.rawr.ANTeam.ancientnature.registries.ANItems;
 
 public class ANItemModel extends ItemModelProvider {
@@ -59,7 +60,33 @@ public class ANItemModel extends ItemModelProvider {
         basicItem(ANItems.TUZOIA_EGGS.get());
         basicItem(ANItems.WORM.get());
 
+        //FENCES
+        fenceItem(ANBlocks.GINKGO_FENCE, ANBlocks.GINKGO_PLANKS);
+        fenceItem(ANBlocks.LEPIDODENDRON_FENCE, ANBlocks.LEPIDODENDRON_PLANKS);
+        //WALLS
+        wallItem(ANBlocks.LIMESTONE_WALL, ANBlocks.LIMESTONE);
+        wallItem(ANBlocks.LIMESTONE_BRICKS_WALL, ANBlocks.LIMESTONE_BRICKS);
+        wallItem(ANBlocks.SMOOTH_LIMESTONE_WALL, ANBlocks.SMOOTH_LIMESTONE);
+
         basicItem(ANItems.MUSIC_DISC_ANCIENT_MELODY.get());
         basicItem(ANItems.MUSIC_DISC_WHERE_YOUR_JOURNEY_BEGINS.get());
+    }
+
+    public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(AncientNature.MODID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void wallItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(AncientNature.MODID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(DeferredItem<?> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(AncientNature.MODID,"item/" + item.getId().getPath()));
     }
 }

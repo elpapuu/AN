@@ -13,6 +13,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.rawr.ANTeam.ancientnature.registries.*;
+import net.rawr.ANTeam.ancientnature.registries.util.ANWoodTypes;
 
 @Mod(AncientNature.MODID)
 public class AncientNature {
@@ -25,6 +26,9 @@ public class AncientNature {
         ANCreativeTabs.register(modEventBus);
         ANItems.register(modEventBus);
         ANSounds.register(modEventBus);
+        ANBlocks.register(modEventBus);
+        Sheets.addWoodType(ANWoodTypes.GINKGO);
+        Sheets.addWoodType(ANWoodTypes.LEPIDODENDRON);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
