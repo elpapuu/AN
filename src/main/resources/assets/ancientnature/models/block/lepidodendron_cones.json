@@ -1,10 +1,7 @@
 {
-  "parent": "ancientnature:block/amber_ginkgo_log",
-  "display": {
-    "firstperson": {
-      "rotation": [ 90, 90, 90 ],
-      "translation": [ 0, 1.5, 0 ],
-      "scale": [ 1, 1, 1 ]
-    }
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "ancientnature:block/lepidodendron_cones"
   }
 }

@@ -58,6 +58,56 @@ public class ANCreativeTabs {
 
                     }).build());
 
+    public static final Supplier<CreativeModeTab> ANCIENTNATURE_BLOCKS_TAB = CREATIVE_MODE_TAB.register("ancientnature_blocks_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ANBlocks.AMBER_ORE.get()))
+                    .title(Component.translatable("creativetab.ancientnature_blocks_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ANBlocks.DEEPSLATE_AMBER_ORE);
+                        output.accept(ANBlocks.DEEPSLATE_CAMBRIAN_FOSSILS);
+                        output.accept(ANBlocks.DEEPSLATE_ORDOVICIAN_FOSSILS);
+                        output.accept(ANBlocks.DEEPSLATE_DEVONIAN_FOSSILS);
+                        output.accept(ANBlocks.DEEPSLATE_CARBONIFEROUS_FOSSILS);
+                        output.accept(ANBlocks.DEEPSLATE_PERMIAN_FOSSILS);
+                        output.accept(ANBlocks.PERMIAN_FOSSILS);
+                        output.accept(ANBlocks.CRETACEOUS_FOSSILS);
+                        output.accept(ANBlocks.PLEISTOCENE_FOSSILS);
+                        output.accept(ANBlocks.HOLOCENE_FOSSILS);
+                        output.accept(ANBlocks.LIMESTONE_FOSSILS);
+                        output.accept(ANBlocks.PERMAFROST_FOSSILS);
+                        output.accept(ANBlocks.AMBER_ORE);
+                        output.accept(ANBlocks.LIMESTONE);
+                        output.accept(ANBlocks.LIMESTONE_SLAB);
+                        output.accept(ANBlocks.LIMESTONE_STAIRS);
+                        output.accept(ANBlocks.LIMESTONE_WALL);
+                        output.accept(ANBlocks.LIMESTONE_BRICKS);
+                        output.accept(ANBlocks.LIMESTONE_BRICKS_SLAB);
+                        output.accept(ANBlocks.LIMESTONE_BRICKS_STAIRS);
+                        output.accept(ANBlocks.LIMESTONE_BRICKS_WALL);
+                        output.accept(ANBlocks.SMOOTH_LIMESTONE);
+                        output.accept(ANBlocks.SMOOTH_LIMESTONE_SLAB);
+                        output.accept(ANBlocks.SMOOTH_LIMESTONE_STAIRS);
+                        output.accept(ANBlocks.SMOOTH_LIMESTONE_WALL);
+                        output.accept(ANBlocks.CHISELED_LIMESTONE);
+                        output.accept(ANBlocks.GINKGO_LEAVES);
+                        output.accept(ANBlocks.GOLDEN_GINKGO_LEAVES);
+                        output.accept(ANBlocks.GINKGO_LOG);
+                        output.accept(ANBlocks.STRIPPED_GINKGO_LOG);
+                        output.accept(ANBlocks.GINKGO_PLANKS);
+                        output.accept(ANBlocks.GINKGO_SLAB);
+                        output.accept(ANBlocks.GINKGO_STAIRS);
+                        output.accept(ANBlocks.GINKGO_FENCE);
+                        output.accept(ANBlocks.LEPIDODENDRON_LEAVES);
+                        output.accept(ANBlocks.LEPIDODENDRON_CONES);
+                        output.accept(ANBlocks.UNSCALED_LEPIDODENDRON_LOG);
+                        output.accept(ANBlocks.STRIPPED_LEPIDODENDRON_LOG);
+                        output.accept(ANBlocks.LEPIDODENDRON_PLANKS);
+                        output.accept(ANBlocks.LEPIDODENDRON_SLAB);
+                        output.accept(ANBlocks.LEPIDODENDRON_STAIRS);
+                        output.accept(ANBlocks.LEPIDODENDRON_FENCE);
+
+                    }).build());
+
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
     }
