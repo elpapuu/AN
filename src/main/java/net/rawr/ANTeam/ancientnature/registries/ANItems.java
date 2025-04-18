@@ -11,7 +11,7 @@ public class ANItems {
 
     public static final DeferredItem<Item> AMBER = ITEMS.register("amber", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> FERN_AMBER = ITEMS.register("fern_amber", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> LIZARD_AMEBR = ITEMS.register("lizard_amber", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LIZARD_AMBER = ITEMS.register("lizard_amber", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> MOSQUITO_AMBER = ITEMS.register("mosquito_amber", () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> DEEPSLATE_CAMBRIAN_FOSSIL = ITEMS.register("deepslate_cambrian_fossil", () -> new Item(new Item.Properties()));

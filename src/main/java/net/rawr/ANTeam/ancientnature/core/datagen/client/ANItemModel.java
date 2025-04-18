@@ -21,7 +21,7 @@ public class ANItemModel extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ANItems.AMBER.get());
         basicItem(ANItems.FERN_AMBER.get());
-        basicItem(ANItems.LIZARD_AMEBR.get());
+        basicItem(ANItems.LIZARD_AMBER.get());
         basicItem(ANItems.MOSQUITO_AMBER.get());
 
         basicItem(ANItems.DEEPSLATE_CAMBRIAN_FOSSIL.get());

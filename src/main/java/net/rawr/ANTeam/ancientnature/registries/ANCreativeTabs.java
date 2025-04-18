@@ -19,7 +19,7 @@ public class ANCreativeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ANItems.AMBER);
                         output.accept(ANItems.FERN_AMBER);
-                        output.accept(ANItems.LIZARD_AMEBR);
+                        output.accept(ANItems.LIZARD_AMBER);
                         output.accept(ANItems.MOSQUITO_AMBER);
                         output.accept(ANItems.DEEPSLATE_CAMBRIAN_FOSSIL);
                         output.accept(ANItems.CARBONIFEROUS_FOSSIL);
