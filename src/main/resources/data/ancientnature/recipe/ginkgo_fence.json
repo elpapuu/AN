@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "G": {
+      "item": "ancientnature:ginkgo_planks"
+    }
+  },
+  "pattern": [
+    "G#G",
+    "G#G"
+  ],
+  "result": {
+    "count": 3,
+    "id": "ancientnature:ginkgo_fence"
+  }
+}

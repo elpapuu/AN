@@ -7,8 +7,9 @@ import net.minecraft.core.HolderLookup;
  import net.neoforged.neoforge.common.data.ExistingFileHelper;
  import net.rawr.ANTeam.ancientnature.AncientNature;
  import net.rawr.ANTeam.ancientnature.registries.ANBlocks;
- 
- import javax.annotation.Nullable;
+import net.rawr.ANTeam.ancientnature.registries.ANTags;
+
+import javax.annotation.Nullable;
  import java.util.concurrent.CompletableFuture;
  
  public class ANBlockTagsProvider extends BlockTagsProvider {
@@ -79,9 +80,7 @@ import net.minecraft.core.HolderLookup;
                  .add(ANBlocks.DEEPSLATE_ORDOVICIAN_FOSSILS.get())
                  .add(ANBlocks.DEEPSLATE_DEVONIAN_FOSSILS.get())
                  .add(ANBlocks.DEEPSLATE_CARBONIFEROUS_FOSSILS.get());
- 
-         this.tag(BlockTags.NEEDS_STONE_TOOL);
- 
+
          //LOGS
          this.tag(BlockTags.LOGS_THAT_BURN)
                  .add(ANBlocks.GINKGO_LOG.get())
@@ -126,14 +125,11 @@ import net.minecraft.core.HolderLookup;
                  .add(ANBlocks.LIMESTONE_BRICKS_STAIRS.get())
                  .add(ANBlocks.SMOOTH_LIMESTONE_STAIRS.get());
  
-         this.tag(BlockTags.STONE_BUTTONS);
- 
-         this.tag(BlockTags.STONE_PRESSURE_PLATES);
- 
          this.tag(BlockTags.WALLS)
                  .add(ANBlocks.LIMESTONE_WALL.get())
                  .add(ANBlocks.LIMESTONE_BRICKS_WALL.get())
                  .add(ANBlocks.SMOOTH_LIMESTONE_WALL.get());
+
          //LEAVES
          this.tag(BlockTags.LEAVES)
                  .add(ANBlocks.GINKGO_LEAVES.get())

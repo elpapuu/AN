@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "ancientnature:ginkgo_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "ancientnature:ginkgo_planks"
+  }
+}

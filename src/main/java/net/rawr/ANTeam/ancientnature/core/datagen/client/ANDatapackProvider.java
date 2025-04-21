@@ -14,14 +14,14 @@ import net.rawr.ANTeam.ancientnature.common.worldgen.ANPlacedFeatures;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
+public class ANDatapackProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
 
             .add(Registries.CONFIGURED_FEATURE, ANConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ANPlacedFeatures::bootstrap)
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ANBiomeModifiers::bootstrap);
 
-    public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+    public ANDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(AncientNature.MODID));
     }
 }

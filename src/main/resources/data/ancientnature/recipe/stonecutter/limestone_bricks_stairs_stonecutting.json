@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "ancientnature:limestone_bricks"
+  },
+  "id": "ancientnature:limestone_bricks_stairs"
+}

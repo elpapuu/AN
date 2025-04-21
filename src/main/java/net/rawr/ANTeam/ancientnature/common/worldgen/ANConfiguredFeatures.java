@@ -75,18 +75,18 @@ import java.util.List;
          List<OreConfiguration.TargetBlockState> overworldLimestone = List.of(
                  OreConfiguration.target(stoneReplaceables, ANBlocks.LIMESTONE.get().defaultBlockState()));
 
-         register(context, AMBER_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAmberOres, 5));
-         register(context, DEEPSLATE_AMBER_ORE_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateAmberOres, 6));
-         register(context, DEEPSLATE_CAMBRIAN_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateCambrianFossils, 7));
-         register(context, DEEPSLATE_ORDOVICIAN_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateOrdovicianFossils, 7));
-         register(context, DEEPSLATE_DEVONIAN_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateDevonianFossils, 7));
-         register(context, DEEPSLATE_CARBONIFEROUS_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateCarboniferousFossils, 8));
-         register(context, OVERWORLD_PERMIAN_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldPermianFossils, 9));
-         register(context, STONE_CRETACEOUS_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldCretaceousFossils, 9));
-         register(context, STONE_PLEISTOCENE_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldPleistoceneFossils, 10));
-         register(context, STONE_HOLOCENE_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldHoloceneFossils, 10));
-         register(context, LIMESTONE_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldLimestoneFossils, 5));
-         register(context, LIMESTONE_KEY, Feature.ORE, new OreConfiguration(overworldLimestone, 32));
+         register(context, AMBER_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAmberOres, 3));
+         register(context, DEEPSLATE_AMBER_ORE_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateAmberOres, 4));
+         register(context, DEEPSLATE_CAMBRIAN_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateCambrianFossils, 4));
+         register(context, DEEPSLATE_ORDOVICIAN_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateOrdovicianFossils, 5));
+         register(context, DEEPSLATE_DEVONIAN_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateDevonianFossils, 5));
+         register(context, DEEPSLATE_CARBONIFEROUS_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateCarboniferousFossils, 6));
+         register(context, OVERWORLD_PERMIAN_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldPermianFossils, 6));
+         register(context, STONE_CRETACEOUS_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldCretaceousFossils, 6));
+         register(context, STONE_PLEISTOCENE_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldPleistoceneFossils, 7));
+         register(context, STONE_HOLOCENE_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldHoloceneFossils, 7));
+         register(context, LIMESTONE_FOSSILS_KEY, Feature.ORE, new OreConfiguration(overworldLimestoneFossils, 6));
+         register(context, LIMESTONE_KEY, Feature.ORE, new OreConfiguration(overworldLimestone, 26));
 
      }
 

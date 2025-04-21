@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "ancientnature:smooth_limestone"
+  },
+  "id": "ancientnature:smooth_limestone_slab"
+}

@@ -34,49 +34,49 @@ import java.util.List;
  
  
          register(context, AMBER_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.AMBER_ORE_KEY),
-                 ANOrePlacement.rareOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.absolute(80), VerticalAnchor.absolute(120))));
+                 ANOrePlacement.rareOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(80), VerticalAnchor.absolute(120))));
 
          register(context, DEEPSLATE_AMBER_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.DEEPSLATE_AMBER_ORE_KEY),
-                 ANOrePlacement.commonOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.absolute(-32), VerticalAnchor.absolute(-64))));
+                 ANOrePlacement.commonOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-32), VerticalAnchor.absolute(-64))));
 
          register(context, DEEPSLATE_CAMBRIAN_FOSSILS_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.DEEPSLATE_CAMBRIAN_FOSSILS_KEY),
                  ANOrePlacement.commonOrePlacement(4,
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-49))));
 
          register(context, DEEPSLATE_ORDOVICIAN_FOSSILS_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.DEEPSLATE_CARBONIFEROUS_FOSSILS_KEY),
-                 ANOrePlacement.commonOrePlacement(4,
+                 ANOrePlacement.commonOrePlacement(3,
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(-51), VerticalAnchor.absolute(-39))));
 
          register(context, DEEPSLATE_DEVONIAN_FOSSILS_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.DEEPSLATE_DEVONIAN_FOSSILS_KEY),
-                 ANOrePlacement.commonOrePlacement(5,
+                 ANOrePlacement.commonOrePlacement(2,
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(-31), VerticalAnchor.absolute(-19))));
 
          register(context, DEEPSLATE_CARBONIFEROUS_FOSSILS_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.DEEPSLATE_CARBONIFEROUS_FOSSILS_KEY),
-                 ANOrePlacement.commonOrePlacement(6,
+                 ANOrePlacement.commonOrePlacement(2,
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(-21), VerticalAnchor.absolute(-9))));
 
          register(context, OVERWORLD_PERMIAN_FOSSILS_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.OVERWORLD_PERMIAN_FOSSILS_KEY),
-                 ANOrePlacement.commonOrePlacement(6,
+                 ANOrePlacement.commonOrePlacement(3,
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(-11), VerticalAnchor.absolute(1))));
 
          register(context, CRETACEOUS_FOSSILS_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.STONE_CRETACEOUS_FOSSILS_KEY),
-                 ANOrePlacement.commonOrePlacement(6,
+                 ANOrePlacement.commonOrePlacement(3,
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(19), VerticalAnchor.absolute(31))));
 
          register(context, PLEISTOCENE_FOSSILS_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.STONE_PLEISTOCENE_FOSSILS_KEY),
-                 ANOrePlacement.commonOrePlacement(8,
+                 ANOrePlacement.commonOrePlacement(3,
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(41), VerticalAnchor.absolute(51))));
 
          register(context, HOLOCENE_FOSSILS_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.STONE_HOLOCENE_FOSSILS_KEY),
-                 ANOrePlacement.commonOrePlacement(9,
+                 ANOrePlacement.commonOrePlacement(3,
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(51), VerticalAnchor.absolute(64))));
 
          register(context, LIMESTONE_FOSSILS_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.LIMESTONE_FOSSILS_KEY),
-                 ANOrePlacement.commonOrePlacement(9,
+                 ANOrePlacement.commonOrePlacement(4,
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
 
          register(context, LIMESTONE_PLACED_KEY, configuredFeatures.getOrThrow(ANConfiguredFeatures.LIMESTONE_KEY),
-                 ANOrePlacement.commonOrePlacement(15, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
+                 ANOrePlacement.commonOrePlacement(5, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
      }
  
      private static ResourceKey<PlacedFeature> registerKey(String name) {

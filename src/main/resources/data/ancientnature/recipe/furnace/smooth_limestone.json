@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "ancientnature:limestone"
+  },
+  "id": "ancientnature:smooth_limestone",
+  "cookingtime": 200
+}

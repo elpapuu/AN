@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "slab",
+  "key": {
+    "#": {
+      "item": "ancientnature:smooth_limestone"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "ancientnature:smooth_limestone_slab"
+  }
+}

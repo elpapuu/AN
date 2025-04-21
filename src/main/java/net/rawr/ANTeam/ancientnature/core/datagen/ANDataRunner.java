@@ -11,7 +11,8 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.rawr.ANTeam.ancientnature.AncientNature;
 import net.rawr.ANTeam.ancientnature.core.datagen.client.ANBlockStateProvider;
 import net.rawr.ANTeam.ancientnature.core.datagen.client.ANItemModel;
-import net.rawr.ANTeam.ancientnature.core.datagen.client.ModDatapackProvider;
+import net.rawr.ANTeam.ancientnature.core.datagen.client.ANDatapackProvider;
+import net.rawr.ANTeam.ancientnature.core.datagen.client.ANItemTagGenerator;
 import net.rawr.ANTeam.ancientnature.core.datagen.server.ANBlockTagsProvider;
 import net.rawr.ANTeam.ancientnature.core.datagen.server.loot.ANBlockLootTableProvider;
 
@@ -35,8 +36,9 @@ public class ANDataRunner {
                     List.of(new LootTableProvider.SubProviderEntry(ANBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
             generator.addProvider(true, new ANItemModel(output, helper));
             generator.addProvider(true, new ANBlockStateProvider(output, helper));
-            generator.addProvider(event.includeServer(), new ModDatapackProvider(output, lookupProvider));
-            generator.addProvider(true, new ANBlockTagsProvider(output, lookupProvider, helper));
+            generator.addProvider(event.includeServer(), new ANDatapackProvider(output, lookupProvider));
+            ANBlockTagsProvider blockTags = generator.addProvider(event.includeServer(), new ANBlockTagsProvider(output, lookupProvider, helper));
+            generator.addProvider(true, new ANItemTagGenerator(output, lookupProvider, blockTags.contentsGetter(), helper));
         }
     }
 }
