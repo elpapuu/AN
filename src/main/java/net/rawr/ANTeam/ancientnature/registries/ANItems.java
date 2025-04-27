@@ -36,10 +36,7 @@ public class ANItems {
     public static final DeferredItem<Item> TRILOBITE_FOSSIL = ITEMS.register("trilobite_fossil", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TUZOIA_FOSSIL = ITEMS.register("tuzoia_fossil", () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> STRYCHNOS_FLOWER_AMBER = ITEMS.register("strychnos_flower_amber",
-            () -> new Item(new Item.Properties().rarity(Rarity.RARE).stacksTo(8)
-                    .fireResistant()));
-
+    public static final DeferredItem<Item> LEPIDODENDRON_SCALE = ITEMS.register("lepidodendron_scale", () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> GINKGO_FOSSIL = ITEMS.register("ginkgo_fossil", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> DEEPSLATE_GINKGO_FOSSIL = ITEMS.register("deepslate_ginkgo_fossil", () -> new Item(new Item.Properties()));

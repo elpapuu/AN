@@ -39,8 +39,13 @@ public class LepidodendronTrunkPlacer extends TrunkPlacer {
 
     @Override
     public List<FoliagePlacer.FoliageAttachment> placeTrunk(LevelSimulatedReader pLevel, BiConsumer<BlockPos, BlockState> pBlockSetter, RandomSource pRandom, int pFreeTreeHeight, BlockPos pPos, TreeConfiguration pConfig) {
-        int height = 34;
-
+        int height;
+        int sizeChoice = pRandom.nextInt(3);
+        switch (sizeChoice) {
+            case 0 -> height = 14;
+            case 1 -> height = 25;
+            default -> height = 34;
+        }
         BlockPos.MutableBlockPos mutable = pPos.mutable();
         BlockPos below = mutable.below();
         setDirtAt(pLevel, pBlockSetter, pRandom, below, pConfig);

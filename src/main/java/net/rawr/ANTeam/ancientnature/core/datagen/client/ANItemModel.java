@@ -60,6 +60,9 @@ public class ANItemModel extends ItemModelProvider {
         basicItem(ANItems.TUZOIA_EGGS.get());
         basicItem(ANItems.WORM.get());
 
+
+        basicItem(ANItems.LEPIDODENDRON_SCALE.get());
+
         //FENCES
         fenceItem(ANBlocks.GINKGO_FENCE, ANBlocks.GINKGO_PLANKS);
         fenceItem(ANBlocks.LEPIDODENDRON_FENCE, ANBlocks.LEPIDODENDRON_PLANKS);

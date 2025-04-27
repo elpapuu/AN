@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.advancements.critereon.PlayerInteractTrigger;
+import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 import net.rawr.ANTeam.ancientnature.common.worldgen.tree.ANFoliagePlacerTypes;
+import net.rawr.ANTeam.ancientnature.registries.ANBlocks;
 
 import java.lang.module.Configuration;
 
@@ -35,7 +37,9 @@ public class LepidodendronFoliagePlacer extends FoliagePlacer {
     protected void createFoliage(LevelSimulatedReader pLevel, FoliageSetter pBlockSetter, RandomSource pRandom, TreeConfiguration pConfig, int pMaxFreeTreeHeight, FoliageAttachment pAttachment, int pFoliageHeight, int pFoliageRadius, int pOffset) {
         int leafTop = pOffset + 1;
         int leafBottom = -3;
-        for (int y = leafTop; y >= leafBottom; --y){
+        BlockPos center = pAttachment.pos();
+
+        for (int y = leafTop; y >= leafBottom; --y) {
             int layerWidth;
             if (y == leafTop){
                 layerWidth = 2;
@@ -49,6 +53,18 @@ public class LepidodendronFoliagePlacer extends FoliagePlacer {
 
 
             this.placeLeavesRow(pLevel, pBlockSetter, pRandom, pConfig, pAttachment.pos(), layerWidth, y, pAttachment.doubleTrunk());
+
+            for (int dx = -layerWidth; dx <= layerWidth; ++dx) {
+                for (int dz = -layerWidth; dz <= layerWidth; ++dz) {
+                    if (shouldSkipLocation(pRandom, dx, y, dz, layerWidth, pAttachment.doubleTrunk())) continue;
+                    BlockPos leafPos = center.offset(dx, y, dz);
+                    pBlockSetter.set(leafPos, pConfig.foliageProvider.getState(pRandom, leafPos));
+                    BlockPos belowPos = leafPos.below();
+                    if (pLevel.isStateAtPosition(belowPos, state -> state.isAir()) && pRandom.nextFloat() < 0.50F) {
+                        pBlockSetter.set(belowPos, ANBlocks.LEPIDODENDRON_CONES.get().defaultBlockState());
+                    }
+                }
+            }
         }
     }
 
