@@ -10,12 +10,12 @@ import net.minecraft.core.particles.ParticleType;
  
  public class ANParticles {
  
-     public static final DeferredRegister<ParticleType<?>> PARTICLES = DeferredRegister.create(Registries.PARTICLE_TYPE, AncientNature.MODID);
+     public static final DeferredRegister<ParticleType<?>> PARTICLES = DeferredRegister.create(Registries.PARTICLE_TYPE, AncientNature.MOD_ID);
  
  
      public static final Supplier<SimpleParticleType> MUD_PARTICLE = register("mud_particle", false);
      public static final Supplier<SimpleParticleType> STONE_PARTICLE = register("stone_particle", false);
-     public static final Supplier<SimpleParticleType> GINKGO_PARTICLE = register("ginkgo_particle", false);
+     public static final Supplier<SimpleParticleType> GINKGO_PARTICLE = register("ginkgo_1", false);
      public static final Supplier<SimpleParticleType> BLEEDING_PARTICLE = register("bleeding_particle", false);
      public static final Supplier<SimpleParticleType> GOLDEN_GINKGO_PARTICLE = register("golden_ginkgo_particle", false);
      public static final Supplier<SimpleParticleType> REVIVAL_STAND_PARTICLE = register("revival_stand_particle", false);

@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 public class ResourceUtils {
     @Contract("_ -> new")
     public static @NotNull ResourceLocation modLoc(String path){
-        return ResourceLocation.fromNamespaceAndPath(AncientNature.MODID, path);
+        return ResourceLocation.fromNamespaceAndPath(AncientNature.MOD_ID, path);
     }
 
     @Contract("_ -> new")

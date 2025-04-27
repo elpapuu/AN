@@ -27,6 +27,10 @@ public class ANBiomeModifiers {
      public static final ResourceKey<BiomeModifier> ADD_LIMESTONE_FOSSILS = registerKey("add_limestone_fossils");
      public static final ResourceKey<BiomeModifier> ADD_LIMESTONE = registerKey("add_limestone");
 
+    public static final ResourceKey<BiomeModifier> ADD_GINKGO = registerKey("add_ginkgo");
+    public static final ResourceKey<BiomeModifier> ADD_MINI_GINKGO = registerKey("add_mini_ginkgo");
+    public static final ResourceKey<BiomeModifier> ADD_HUGE_GINKGO = registerKey("add_huge_ginkgo");
+
 
      public static void bootstrap(BootstrapContext<BiomeModifier> context) {
          // CF -> PF -> BM
@@ -93,9 +97,31 @@ public class ANBiomeModifiers {
                  HolderSet.direct(placedFeatures.getOrThrow(ANPlacedFeatures.LIMESTONE_PLACED_KEY)),
                  GenerationStep.Decoration.RAW_GENERATION));
 
+         context.register(ADD_GINKGO, new BiomeModifiers.AddFeaturesBiomeModifier(
+                 HolderSet.direct(
+                         biomes.getOrThrow(Biomes.FOREST),
+                         biomes.getOrThrow(Biomes.TAIGA)),
+                 HolderSet.direct(placedFeatures.getOrThrow(ANPlacedFeatures.GINKGO_LIST_PLACED_KEY)),
+                 GenerationStep.Decoration.VEGETAL_DECORATION));
+
+         context.register(ADD_MINI_GINKGO, new BiomeModifiers.AddFeaturesBiomeModifier(
+                 HolderSet.direct(
+                         biomes.getOrThrow(Biomes.FOREST),
+                         biomes.getOrThrow(Biomes.PLAINS),
+                         biomes.getOrThrow(Biomes.TAIGA)),
+                 HolderSet.direct(placedFeatures.getOrThrow(ANPlacedFeatures.MINI_GINKGO_LIST_PLACED_KEY)),
+                 GenerationStep.Decoration.VEGETAL_DECORATION));
+
+         context.register(ADD_HUGE_GINKGO, new BiomeModifiers.AddFeaturesBiomeModifier(
+                 HolderSet.direct(
+                         biomes.getOrThrow(Biomes.FOREST),
+                         biomes.getOrThrow(Biomes.TAIGA)),
+                 HolderSet.direct(placedFeatures.getOrThrow(ANPlacedFeatures.HUGE_GINKGO_LIST_PLACED_KEY)),
+                 GenerationStep.Decoration.VEGETAL_DECORATION));
+
      }
  
      private static ResourceKey<BiomeModifier> registerKey(String name) {
-         return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(AncientNature.MODID, name));
+         return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(AncientNature.MOD_ID, name));
      }
  }

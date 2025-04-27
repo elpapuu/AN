@@ -12,12 +12,14 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.rawr.ANTeam.ancientnature.common.worldgen.tree.ANFoliagePlacerTypes;
+import net.rawr.ANTeam.ancientnature.common.worldgen.tree.ANTrunkPlacerTypes;
 import net.rawr.ANTeam.ancientnature.registries.*;
 import net.rawr.ANTeam.ancientnature.registries.util.ANWoodTypes;
 
-@Mod(AncientNature.MODID)
+@Mod(AncientNature.MOD_ID)
 public class AncientNature {
-    public static final String MODID = "ancientnature";
+    public static final String MOD_ID = "ancientnature";
 
     public AncientNature(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
@@ -27,6 +29,10 @@ public class AncientNature {
         ANItems.register(modEventBus);
         ANSounds.register(modEventBus);
         ANBlocks.register(modEventBus);
+
+        ANTrunkPlacerTypes.register(modEventBus);
+        ANFoliagePlacerTypes.register(modEventBus);
+
         Sheets.addWoodType(ANWoodTypes.GINKGO);
         Sheets.addWoodType(ANWoodTypes.LEPIDODENDRON);
     }
@@ -40,7 +46,7 @@ public class AncientNature {
 
     }
     public static ResourceLocation modLoc(String name){
-        return ResourceLocation.fromNamespaceAndPath(MODID, name);
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, name);
     }
 
     public static ResourceLocation entityTexture(String name){
@@ -48,7 +54,7 @@ public class AncientNature {
     }
 
 
-    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {

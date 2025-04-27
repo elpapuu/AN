@@ -7,11 +7,12 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rawr.ANTeam.ancientnature.AncientNature;
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.function.Supplier;
 
 public class ANCreativeTabs {
-    public static DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AncientNature.MODID);
+    public static DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AncientNature.MOD_ID);
 
     public static final Supplier<CreativeModeTab> ANCIENTNATURE_ITEMS_TAB = CREATIVE_MODE_TAB.register("ancientnature_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ANItems.MOSQUITO_AMBER.get()))
@@ -88,14 +89,17 @@ public class ANCreativeTabs {
                         output.accept(ANBlocks.SMOOTH_LIMESTONE_STAIRS);
                         output.accept(ANBlocks.SMOOTH_LIMESTONE_WALL);
                         output.accept(ANBlocks.CHISELED_LIMESTONE);
+                        output.accept(ANBlocks.GINKGO_SAPLING.get());
                         output.accept(ANBlocks.GINKGO_LEAVES);
                         output.accept(ANBlocks.GOLDEN_GINKGO_LEAVES);
                         output.accept(ANBlocks.GINKGO_LOG);
                         output.accept(ANBlocks.STRIPPED_GINKGO_LOG);
+                        output.accept(ANBlocks.AMBER_GINKGO_LOG);
                         output.accept(ANBlocks.GINKGO_PLANKS);
                         output.accept(ANBlocks.GINKGO_SLAB);
                         output.accept(ANBlocks.GINKGO_STAIRS);
                         output.accept(ANBlocks.GINKGO_FENCE);
+                        output.accept(ANBlocks.LEPIDODENDRON_SAPLING);
                         output.accept(ANBlocks.LEPIDODENDRON_LEAVES);
                         output.accept(ANBlocks.LEPIDODENDRON_CONES);
                         output.accept(ANBlocks.LEPIDODENDRON_LOG);

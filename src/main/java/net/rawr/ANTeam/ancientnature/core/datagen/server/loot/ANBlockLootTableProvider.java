@@ -10,6 +10,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -18,7 +19,8 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
  import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
- import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.rawr.ANTeam.ancientnature.registries.ANBlocks;
 import net.rawr.ANTeam.ancientnature.registries.ANItems;
 
@@ -92,6 +94,25 @@ import java.util.Set;
                  block -> createSlabItemTable(ANBlocks.GINKGO_SLAB.get()));
          dropSelf(ANBlocks.GINKGO_FENCE.get());
 
+         dropSelf(ANBlocks.GINKGO_SAPLING.get());
+         add(ANBlocks.POTTED_GINKGO_SAPLING.get(), LootTable.lootTable()
+                 .withPool(LootPool.lootPool()
+                         .setRolls(ConstantValue.exactly(1))
+                         .add(LootItem.lootTableItem(Blocks.FLOWER_POT)))
+                 .withPool(LootPool.lootPool()
+                         .setRolls(ConstantValue.exactly(1))
+                         .add(LootItem.lootTableItem(ANBlocks.GINKGO_SAPLING.get()))));
+
+         dropSelf(ANBlocks.LEPIDODENDRON_SAPLING.get());
+         add(ANBlocks.POTTED_LEPIDODENDRON_SAPLING.get(), LootTable.lootTable()
+                 .withPool(LootPool.lootPool()
+                         .setRolls(ConstantValue.exactly(1))
+                         .add(LootItem.lootTableItem(Blocks.FLOWER_POT)))
+                 .withPool(LootPool.lootPool()
+                         .setRolls(ConstantValue.exactly(1))
+                         .add(LootItem.lootTableItem(ANBlocks.LEPIDODENDRON_SAPLING.get()))));
+
+
          add(ANBlocks.LEPIDODENDRON_LEAVES.get(),
                  block -> noDrop());
          dropSelf(ANBlocks.LEPIDODENDRON_CONES.get());
@@ -103,6 +124,14 @@ import java.util.Set;
          add(ANBlocks.LEPIDODENDRON_SLAB.get(),
                  block -> createSlabItemTable(ANBlocks.LEPIDODENDRON_SLAB.get()));
          dropSelf(ANBlocks.LEPIDODENDRON_FENCE.get());
+
+         // Make GINKGO_LOG_WITH_AMBER drop GINKGO_LOG
+         add(ANBlocks.AMBER_GINKGO_LOG.get(), LootTable.lootTable()
+                 .withPool(LootPool.lootPool()
+                         .setRolls(ConstantValue.exactly(1)) // Always rolls once
+                         .add(LootItem.lootTableItem(ANBlocks.GINKGO_LOG.get())) // Drops GINKGO_LOG
+                 )
+         );
 
          HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
      }

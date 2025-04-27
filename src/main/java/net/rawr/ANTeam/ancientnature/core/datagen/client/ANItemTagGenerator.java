@@ -16,7 +16,7 @@ import java.util.concurrent.CompletableFuture;
 public class ANItemTagGenerator extends ItemTagsProvider {
     public ANItemTagGenerator(PackOutput p_275343_, CompletableFuture<HolderLookup.Provider> p_275729_,
                               CompletableFuture<TagLookup<Block>> p_275322_, @Nullable ExistingFileHelper existingFileHelper) {
-        super(p_275343_, p_275729_, p_275322_, AncientNature.MODID, existingFileHelper);
+        super(p_275343_, p_275729_, p_275322_, AncientNature.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -28,6 +28,7 @@ public class ANItemTagGenerator extends ItemTagsProvider {
 
         this.tag(ItemTags.LOGS_THAT_BURN)
                 .add(ANBlocks.GINKGO_LOG.get().asItem())
+                .add(ANBlocks.AMBER_GINKGO_LOG.get().asItem())
                 .add(ANBlocks.LEPIDODENDRON_LOG.get().asItem())
                 .add(ANBlocks.STRIPPED_GINKGO_LOG.get().asItem())
                 .add(ANBlocks.STRIPPED_LEPIDODENDRON_LOG.get().asItem())
@@ -35,7 +36,8 @@ public class ANItemTagGenerator extends ItemTagsProvider {
 
         this.tag(ANTags.Items.GINKGO_LOGS)
                 .add(ANBlocks.GINKGO_LOG.get().asItem())
-                .add(ANBlocks.STRIPPED_GINKGO_LOG.get().asItem());
+                .add(ANBlocks.STRIPPED_GINKGO_LOG.get().asItem())
+                .add(ANBlocks.AMBER_GINKGO_LOG.get().asItem());
 
         this.tag(ANTags.Items.LEPIDODENDRON_LOGS)
                 .add(ANBlocks.LEPIDODENDRON_LOG.get().asItem())

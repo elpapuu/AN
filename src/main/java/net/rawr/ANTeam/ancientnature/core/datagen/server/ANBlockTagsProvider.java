@@ -7,14 +7,13 @@ import net.minecraft.core.HolderLookup;
  import net.neoforged.neoforge.common.data.ExistingFileHelper;
  import net.rawr.ANTeam.ancientnature.AncientNature;
  import net.rawr.ANTeam.ancientnature.registries.ANBlocks;
-import net.rawr.ANTeam.ancientnature.registries.ANTags;
 
 import javax.annotation.Nullable;
  import java.util.concurrent.CompletableFuture;
  
  public class ANBlockTagsProvider extends BlockTagsProvider {
      public ANBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-         super(output, lookupProvider, AncientNature.MODID, existingFileHelper);
+         super(output, lookupProvider, AncientNature.MOD_ID, existingFileHelper);
      }
  
      @Override
@@ -22,6 +21,7 @@ import javax.annotation.Nullable;
  
          this.tag(BlockTags.MINEABLE_WITH_AXE)
                  .add(ANBlocks.GINKGO_LOG.get())
+                 .add(ANBlocks.AMBER_GINKGO_LOG.get())
                  .add(ANBlocks.LEPIDODENDRON_LOG.get())
                  .add(ANBlocks.STRIPPED_GINKGO_LOG.get())
                  .add(ANBlocks.STRIPPED_LEPIDODENDRON_LOG.get())
@@ -84,12 +84,14 @@ import javax.annotation.Nullable;
          //LOGS
          this.tag(BlockTags.LOGS_THAT_BURN)
                  .add(ANBlocks.GINKGO_LOG.get())
+                 .add(ANBlocks.AMBER_GINKGO_LOG.get())
                  .add(ANBlocks.STRIPPED_GINKGO_LOG.get())
                  .add(ANBlocks.STRIPPED_LEPIDODENDRON_LOG.get())
                  .add(ANBlocks.UNSCALED_LEPIDODENDRON_LOG.get());
  
          this.tag(BlockTags.LOGS)
                  .add(ANBlocks.GINKGO_LOG.get())
+                 .add(ANBlocks.AMBER_GINKGO_LOG.get())
                  .add(ANBlocks.STRIPPED_GINKGO_LOG.get())
                  .add(ANBlocks.STRIPPED_LEPIDODENDRON_LOG.get())
                  .add(ANBlocks.UNSCALED_LEPIDODENDRON_LOG.get());

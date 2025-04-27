@@ -31,19 +31,19 @@ import net.minecraft.core.BlockPos;
  
      public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
          super.animateTick(state , level, pos, random);
-         if (random.nextInt(10) == 0 && state.is(ANBlocks.GINKGO_LEAVES.get())) {
-             BlockPos $$4 = pos.below();
-             BlockState $$5 = level.getBlockState($$4);
-             if (!isFaceFull($$5.getCollisionShape(level, $$4), Direction.UP)) {
-                 ParticleUtils.spawnParticleBelow(level , pos, random, ANParticles.GINKGO_PARTICLE.get());
-             }
-         }
-         else if (random.nextInt(10) == 0 && state.is(ANBlocks.GOLDEN_GINKGO_LEAVES.get())) {
-             BlockPos $$4 = pos.below();
-             BlockState $$5 = level.getBlockState($$4);
-             if (!isFaceFull($$5.getCollisionShape(level, $$4), Direction.UP)) {
-                 ParticleUtils.spawnParticleBelow(level , pos, random, ANParticles.GOLDEN_GINKGO_PARTICLE.get());
-             }
-         }
+//         if (random.nextInt(10) == 0 && state.is(ANBlocks.GINKGO_LEAVES.get())) {
+//             BlockPos $$4 = pos.below();
+//             BlockState $$5 = level.getBlockState($$4);
+//             if (!isFaceFull($$5.getCollisionShape(level, $$4), Direction.UP)) {
+//                 ParticleUtils.spawnParticleBelow(level , pos, random, ANParticles.GINKGO_PARTICLE.get());
+//             }
+//         }
+//         else if (random.nextInt(10) == 0 && state.is(ANBlocks.GOLDEN_GINKGO_LEAVES.get())) {
+//             BlockPos $$4 = pos.below();
+//             BlockState $$5 = level.getBlockState($$4);
+//             if (!isFaceFull($$5.getCollisionShape(level, $$4), Direction.UP)) {
+//                 ParticleUtils.spawnParticleBelow(level , pos, random, ANParticles.GOLDEN_GINKGO_PARTICLE.get());
+//             }
+//         }
      }
  }

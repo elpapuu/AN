@@ -22,6 +22,6 @@ public class ANDatapackProvider extends DatapackBuiltinEntriesProvider {
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ANBiomeModifiers::bootstrap);
 
     public ANDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(AncientNature.MODID));
+        super(output, registries, BUILDER, Set.of(AncientNature.MOD_ID));
     }
 }

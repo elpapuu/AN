@@ -5,6 +5,6 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
  import net.rawr.ANTeam.ancientnature.AncientNature;
  
  public class ANWoodTypes {
-     public static final WoodType LEPIDODENDRON = WoodType.register(new WoodType(AncientNature.MODID + ":lepidodendron", BlockSetType.OAK));
-     public static final WoodType GINKGO = WoodType.register(new WoodType(AncientNature.MODID + ":ginkgo", BlockSetType.OAK));
+     public static final WoodType LEPIDODENDRON = WoodType.register(new WoodType(AncientNature.MOD_ID + ":lepidodendron", BlockSetType.OAK));
+     public static final WoodType GINKGO = WoodType.register(new WoodType(AncientNature.MOD_ID + ":ginkgo", BlockSetType.OAK));
  }

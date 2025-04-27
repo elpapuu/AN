@@ -2,7 +2,6 @@ package net.rawr.ANTeam.ancientnature.registries;
 
 
 import com.google.common.base.Supplier;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -14,12 +13,12 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rawr.ANTeam.ancientnature.AncientNature;
 import net.rawr.ANTeam.ancientnature.common.block.*;
-import net.rawr.ANTeam.ancientnature.registries.util.ANWoodTypes;
+import net.rawr.ANTeam.ancientnature.common.worldgen.tree.ModTreeGrowers;
 
 import static net.minecraft.world.level.block.SoundType.*;
 
 public class ANBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AncientNature.MODID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AncientNature.MOD_ID);
 
     //AMBER
     public static final DeferredBlock<Block> DEEPSLATE_AMBER_ORE = registerBlock("deepslate_amber_ore", () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_DIAMOND_ORE).strength(5f).requiresCorrectToolForDrops()));
@@ -47,6 +46,9 @@ public class ANBlocks {
     //LEPIDODENDRON WOOD
     public static final DeferredBlock<ANLeavesBlock> LEPIDODENDRON_LEAVES = registerBlock("lepidodendron_leaves", () -> new ANLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
 
+    public static final DeferredBlock<Block> LEPIDODENDRON_SAPLING = registerBlock("lepidodendron_sapling", () -> new SaplingBlock(ModTreeGrowers.LEPIDODENDRON, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> POTTED_LEPIDODENDRON_SAPLING = BLOCKS.register("potted_lepidodendron_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, LEPIDODENDRON_SAPLING, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING)));
+
     public static final DeferredBlock<Block> LEPIDODENDRON_CONES = registerBlock("lepidodendron_cones", () -> new ANUndersidePlantBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(CAVE_VINES)));
 
     public static final DeferredBlock<RotatedPillarBlock> LEPIDODENDRON_LOG = makeStrippableLogBlock("lepidodendron_log");
@@ -62,7 +64,12 @@ public class ANBlocks {
     public static final DeferredBlock<ANLeavesBlock> GINKGO_LEAVES = registerBlock("ginkgo_leaves", () -> new ANLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<ANLeavesBlock> GOLDEN_GINKGO_LEAVES = registerBlock("golden_ginkgo_leaves", () -> new ANLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
 
+    public static final DeferredBlock<Block> GINKGO_SAPLING = registerBlock("ginkgo_sapling", () -> new SaplingBlock(ModTreeGrowers.GINKGO, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> POTTED_GINKGO_SAPLING = BLOCKS.register("potted_ginkgo_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, GINKGO_SAPLING, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING)));
+
+
     public static final DeferredBlock<RotatedPillarBlock> GINKGO_LOG = makeStrippableLogBlock("ginkgo_log");
+    public static final DeferredBlock<ItemDropperBlock> AMBER_GINKGO_LOG = makeItemDropperBlock("amber_ginkgo_log");
     public static final DeferredBlock<RotatedPillarBlock> STRIPPED_GINKGO_LOG = makeStrippedLogBlock("stripped_ginkgo_log");
 
     public static final DeferredBlock<Block> GINKGO_PLANKS = registerBlock("ginkgo_planks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
@@ -123,6 +130,15 @@ public class ANBlocks {
                         .requiresCorrectToolForDrops().strength(2f))
         );
 
+    }
+
+    public static DeferredBlock<ItemDropperBlock> makeItemDropperBlock(String name) {
+        return registerBlock(name,
+
+                () -> new ItemDropperBlock(
+                        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).requiresCorrectToolForDrops().strength(2f) // Copies all default log properties
+                )
+        );
     }
 
 

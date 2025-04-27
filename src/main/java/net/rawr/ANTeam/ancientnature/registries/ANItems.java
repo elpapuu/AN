@@ -1,13 +1,16 @@
 package net.rawr.ANTeam.ancientnature.registries;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rawr.ANTeam.ancientnature.AncientNature;
 
 public class ANItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AncientNature.MODID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AncientNature.MOD_ID);
+
+//    public static final Rarity RARITY_FLORA_BOOSTED_AMBER = Rarity("ancientnature:flora_boosted_amber", style -> style.withColor(0X038c45));
 
     public static final DeferredItem<Item> AMBER = ITEMS.register("amber", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> FERN_AMBER = ITEMS.register("fern_amber", () -> new Item(new Item.Properties()));
@@ -32,6 +35,11 @@ public class ANItems {
     public static final DeferredItem<Item> THYLACINE_FOSSIL = ITEMS.register("thylacine_fossil", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TRILOBITE_FOSSIL = ITEMS.register("trilobite_fossil", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TUZOIA_FOSSIL = ITEMS.register("tuzoia_fossil", () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> STRYCHNOS_FLOWER_AMBER = ITEMS.register("strychnos_flower_amber",
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE).stacksTo(8)
+                    .fireResistant()));
+
 
     public static final DeferredItem<Item> GINKGO_FOSSIL = ITEMS.register("ginkgo_fossil", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> DEEPSLATE_GINKGO_FOSSIL = ITEMS.register("deepslate_ginkgo_fossil", () -> new Item(new Item.Properties()));

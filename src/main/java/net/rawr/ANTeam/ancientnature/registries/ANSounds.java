@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 public class ANSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
-            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, AncientNature.MODID);
+            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, AncientNature.MOD_ID);
 
     public static final ResourceKey<JukeboxSong> ANCIENT_MELODY_RESOURCE_KEY = createDiscSound("ancient_melody");
     private static final Supplier<SoundEvent> ANCIENT_MELODY = registerSoundEvent("ancient_melody");
@@ -22,11 +22,11 @@ public class ANSounds {
     private static final Supplier<SoundEvent> WHERE_YOUR_JOURNEY_BEGINS = registerSoundEvent("where_your_journey_begins");
 
     private static ResourceKey<JukeboxSong> createDiscSound(String name) {
-        return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(AncientNature.MODID, name));
+        return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(AncientNature.MOD_ID, name));
     }
 
     private static Supplier<SoundEvent> registerSoundEvent(String name) {
-        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(AncientNature.MODID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(AncientNature.MOD_ID, name);
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
     }
 

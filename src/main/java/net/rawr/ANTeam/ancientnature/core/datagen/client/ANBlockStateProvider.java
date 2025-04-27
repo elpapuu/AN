@@ -18,7 +18,7 @@ import net.minecraft.core.Direction;
  public class ANBlockStateProvider extends BlockStateProvider {
  
      public ANBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-         super(output, AncientNature.MODID, exFileHelper);
+         super(output, AncientNature.MOD_ID, exFileHelper);
      }
  
      @Override
@@ -80,6 +80,17 @@ import net.minecraft.core.Direction;
              blockItem(ANBlocks.LIMESTONE_BRICKS_SLAB);
              blockItem(ANBlocks.SMOOTH_LIMESTONE_STAIRS);
              blockItem(ANBlocks.SMOOTH_LIMESTONE_SLAB);
+
+         saplingBlock(ANBlocks.GINKGO_SAPLING);
+         saplingBlock(ANBlocks.LEPIDODENDRON_SAPLING);
+         simpleBlock(ANBlocks.POTTED_GINKGO_SAPLING.get(), models().withExistingParent(
+                         name(ANBlocks.POTTED_GINKGO_SAPLING.get()), "minecraft:block/flower_pot_cross"
+                 ).texture("plant", blockTexture(ANBlocks.GINKGO_SAPLING.get()))
+                 .renderType("cutout"));
+         simpleBlock(ANBlocks.POTTED_LEPIDODENDRON_SAPLING.get(), models().withExistingParent(
+                         name(ANBlocks.POTTED_LEPIDODENDRON_SAPLING.get()), "minecraft:block/flower_pot_cross"
+                 ).texture("plant", blockTexture(ANBlocks.LEPIDODENDRON_SAPLING.get()))
+                 .renderType("cutout"));
      }
      @Override
      public void simpleBlock(Block block, ModelFile model) {
@@ -145,7 +156,7 @@ import net.minecraft.core.Direction;
      private void logBlockWithModel(RotatedPillarBlock block) {
          // Use the existing model file path
          String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-         String modid = AncientNature.MODID;
+         String modid = AncientNature.MOD_ID;
  
          // Create the log block model using a single texture
          ModelFile logModel = models().withExistingParent(name, "block/cube_column")
@@ -168,5 +179,10 @@ import net.minecraft.core.Direction;
          // Generate item model to point to the block model
          itemModels().withExistingParent(name, modid + ":block/" + name);
      }
- 
+
+     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
+         simpleBlock(blockRegistryObject.get(),
+                 models().cross(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(),
+                         blockTexture(blockRegistryObject.get())).renderType("cutout"));
+     }
  }

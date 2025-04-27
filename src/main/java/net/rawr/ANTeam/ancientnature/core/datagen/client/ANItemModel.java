@@ -14,7 +14,7 @@ import net.rawr.ANTeam.ancientnature.registries.ANItems;
 
 public class ANItemModel extends ItemModelProvider {
     public ANItemModel(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, AncientNature.MODID, existingFileHelper);
+        super(output, AncientNature.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -70,23 +70,34 @@ public class ANItemModel extends ItemModelProvider {
 
         basicItem(ANItems.MUSIC_DISC_ANCIENT_MELODY.get());
         basicItem(ANItems.MUSIC_DISC_WHERE_YOUR_JOURNEY_BEGINS.get());
+
+        //SAPLINGS
+        saplingItem(ANBlocks.GINKGO_SAPLING);
+        saplingItem(ANBlocks.LEPIDODENDRON_SAPLING);
+
     }
 
     public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  ResourceLocation.fromNamespaceAndPath(AncientNature.MODID,
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(AncientNature.MOD_ID,
                         "block/" + baseBlock.getId().getPath()));
     }
 
     public void wallItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  ResourceLocation.fromNamespaceAndPath(AncientNature.MODID,
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(AncientNature.MOD_ID,
                         "block/" + baseBlock.getId().getPath()));
     }
 
     private ItemModelBuilder handheldItem(DeferredItem<?> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(AncientNature.MODID,"item/" + item.getId().getPath()));
+                ResourceLocation.fromNamespaceAndPath(AncientNature.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> block) {
+        return withExistingParent(block.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(AncientNature.MOD_ID,"block/" + block.getId().getPath()));
     }
 }

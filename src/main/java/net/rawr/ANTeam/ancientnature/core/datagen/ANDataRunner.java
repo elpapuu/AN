@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = AncientNature.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = AncientNature.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class ANDataRunner {
 
     @SubscribeEvent
