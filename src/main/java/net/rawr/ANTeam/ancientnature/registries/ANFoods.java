@@ -90,6 +90,14 @@ public class ANFoods {
             .fast()
             .build();
 
+    public static final FoodProperties LEPIDODENDRON_CONES
+            = new FoodProperties
+            .Builder()
+            .nutrition(2)
+            .saturationModifier(0.3f)
+            .fast()
+            .build();
+
     public static final FoodProperties WORM
             = new FoodProperties
             .Builder()

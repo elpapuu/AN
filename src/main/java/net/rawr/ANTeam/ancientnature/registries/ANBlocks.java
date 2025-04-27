@@ -4,6 +4,7 @@ package net.rawr.ANTeam.ancientnature.registries;
 import com.google.common.base.Supplier;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -109,6 +110,7 @@ public class ANBlocks {
                 )
         );
     }
+
     public static DeferredBlock<DropExperienceBlock> makeDeepslateFossilBlock(String name){
         return registerBlock(name, () -> new DropExperienceBlock(ConstantInt.of(1), BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE).strength(5f).requiresCorrectToolForDrops()));
     }

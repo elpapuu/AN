@@ -43,8 +43,27 @@ public class LepidodendronTrunkPlacer extends TrunkPlacer {
         int sizeChoice = pRandom.nextInt(3);
         switch (sizeChoice) {
             case 0 -> height = 14;
-            case 1 -> height = 25;
-            default -> height = 34;
+            case 1 -> height = 15;
+            case 2 -> height = 16;
+            case 3 -> height = 17;
+            case 4 -> height = 18;
+            case 5 -> height = 19;
+            case 6 -> height = 20;
+            case 7 -> height = 21;
+            case 8 -> height = 22;
+            case 9 -> height = 23;
+            case 10 -> height = 24;
+            case 12 -> height = 25;
+            case 13 -> height = 26;
+            case 14 -> height = 27;
+            case 15 -> height = 28;
+            case 16 -> height = 29;
+            case 17 -> height = 30;
+            case 18 -> height = 31;
+            case 19 -> height = 32;
+            case 20 -> height = 33;
+            case 21 -> height = 34;
+            default -> height = 35;
         }
         BlockPos.MutableBlockPos mutable = pPos.mutable();
         BlockPos below = mutable.below();

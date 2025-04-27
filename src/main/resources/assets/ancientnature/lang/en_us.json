@@ -42,8 +42,18 @@
   "item.ancientnature.tuzoia_eggs": "Tuzoia Eggs",
   "item.ancientnature.worm": "Worm",
 
+  "item.ancientnature.lepidodendron_scale": "Lepidodendron Scale",
+
   "item.ancientnature.music_disc_ancient_melody": "Music Disc",
   "item.ancientnature.music_disc_ancient_melody.desc": "ChipsTheCat - Ancient Melody",
   "item.ancientnature.music_disc_where_your_journey_begins": "Music Disc",
-  "item.ancientnature.music_disc_where_your_journey_begins.desc": "ChipsTheCat - Where Your Journey Begins"
+  "item.ancientnature.music_disc_where_your_journey_begins.desc": "ChipsTheCat - Where Your Journey Begins",
+
+  "block.ancientnature.lepidodendron_leaves" : "Lepidodendron Leaves",
+  "block.ancientnature.lepidodendron_log" : "Lepidodendron Log",
+  "block.ancientnature.lepidodendron_sapling" : "Lepidodendron Sapling",
+  "block.ancientnature.potted_lepidodendron_sapling" : "Potted Lepidodendron Sapling",
+  "block.ancientnature.lepidodendron_cones" : "Lepidodendron Cones",
+  "block.ancientnature.unscaled_lepidodendron_log" : "Lepidodendron Unscaled Log",
+  "block.ancientnature.stripped_lepidodendron_log" : "Lepidodendron Cones"
 }
