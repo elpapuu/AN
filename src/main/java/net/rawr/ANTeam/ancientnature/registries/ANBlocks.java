@@ -52,7 +52,7 @@ public class ANBlocks {
 
     public static final DeferredBlock<Block> LEPIDODENDRON_CONES = registerBlock("lepidodendron_cones", () -> new ANUndersidePlantBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(CAVE_VINES)));
 
-    public static final DeferredBlock<ItemDropperBlock> LEPIDODENDRON_LOG = makeItemDropperBlock("lepidodendron_log");
+    public static final DeferredBlock<LogDropperBlock> LEPIDODENDRON_LOG = makeLogDropperBlock("lepidodendron_log");
     public static final DeferredBlock<RotatedPillarBlock> UNSCALED_LEPIDODENDRON_LOG = makeStrippableLogBlock("unscaled_lepidodendron_log");
     public static final DeferredBlock<RotatedPillarBlock> STRIPPED_LEPIDODENDRON_LOG = makeStrippedLogBlock("stripped_lepidodendron_log");
 
@@ -106,6 +106,14 @@ public class ANBlocks {
         return registerBlock(name,
 
                 () -> new LogBlock(
+                        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).requiresCorrectToolForDrops().strength(2f) // Copies all default log properties
+                )
+        );
+    }
+    public static DeferredBlock<LogDropperBlock> makeLogDropperBlock(String name) {
+        return registerBlock(name,
+
+                () -> new LogDropperBlock(
                         BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).requiresCorrectToolForDrops().strength(2f) // Copies all default log properties
                 )
         );
