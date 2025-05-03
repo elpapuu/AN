@@ -1,5 +1,6 @@
 package net.rawr.ANTeam.ancientnature.common.block;
 
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -19,6 +20,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.common.ItemAbility;
 import net.rawr.ANTeam.ancientnature.registries.ANBlocks;
 import net.rawr.ANTeam.ancientnature.registries.ANItems;
+import net.rawr.ANTeam.ancientnature.registries.ANSounds;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -45,11 +47,9 @@ public class LogDropperBlock extends RotatedPillarBlock {
         ItemStack heldItem = player.getItemInHand(hand);
         if (heldItem.getItem() instanceof AxeItem) {
             if (state.is(ANBlocks.LEPIDODENDRON_LOG.get())) {
-                if (!level.isClientSide) { // Only run on the server
-                    // Generate random chance
+                if (!level.isClientSide) {
                     double chance = Math.random();
 
-                    // Check chances and drop items accordingly
                     if (chance < 0.7) { // 70% chance to drop item A
                         popResource(level, pos, new ItemStack(ANItems.LEPIDODENDRON_SCALE.get(), 1));
                         if (chance < 0.75) { // 70% chance to drop item A
@@ -60,19 +60,15 @@ public class LogDropperBlock extends RotatedPillarBlock {
                             popResource(level, pos, new ItemStack(ANItems.MUSIC_DISC_ANCIENT_MELODY.get(), 2));
                         }
                     }
-                    // Change the block to ANBlocks.GINKGO_LOG
                     level.setBlock(pos, ANBlocks.UNSCALED_LEPIDODENDRON_LOG.get().defaultBlockState(), 3);
-                    // Play a sound at the block's position
                     level.playSound(
-                            null, // Player (null means all players hear it)
-                            pos,  // Position of the sound
-                            SoundEvents.CHICKEN_EGG, // Sound event (use a fitting sound here)
-                            SoundSource.BLOCKS, // Sound category
-                            1.0F, // Volume
-                            1.0F // Pitch
+                            null,
+                            pos,
+                            SoundEvents.BAMBOO_WOOD_BREAK,
+                            SoundSource.BLOCKS,
+                            1.0F,
+                            1.0F
                     );
-
-                    // Optionally return a new block state or allow interaction to proceed
                     return ItemInteractionResult.SUCCESS;
                 }
             }

@@ -21,6 +21,8 @@ public class ANSounds {
     public static final ResourceKey<JukeboxSong> WHERE_YOUR_JOURNEY_BEGINS_RESOURCE_KEY = createDiscSound("where_your_journey_begins");
     private static final Supplier<SoundEvent> WHERE_YOUR_JOURNEY_BEGINS = registerSoundEvent("where_your_journey_begins");
 
+    public static final Supplier<SoundEvent> LEPIDODENDRON_SCALE_DROP = registerSoundEvent("lepidodendron_scale_drop_1");
+
     private static ResourceKey<JukeboxSong> createDiscSound(String name) {
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(AncientNature.MOD_ID, name));
     }
