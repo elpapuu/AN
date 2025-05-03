@@ -73,9 +73,8 @@ public class ANCreativeTabs {
                         output.accept(ANBlocks.CRETACEOUS_FOSSILS);
                         output.accept(ANBlocks.PLEISTOCENE_FOSSILS);
                         output.accept(ANBlocks.HOLOCENE_FOSSILS);
-                        output.accept(ANBlocks.LIMESTONE_FOSSILS);
-                        output.accept(ANBlocks.PERMAFROST_FOSSILS);
                         output.accept(ANBlocks.AMBER_ORE);
+                        output.accept(ANBlocks.LIMESTONE_FOSSILS);
                         output.accept(ANBlocks.LIMESTONE);
                         output.accept(ANBlocks.LIMESTONE_SLAB);
                         output.accept(ANBlocks.LIMESTONE_STAIRS);
